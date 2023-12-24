@@ -74,13 +74,6 @@ public class CircularLinkedListIterator<T> implements Iterator<T>
             throw new IllegalStateException("Circular Linked List is empty");
         }
 
-        if (iterHead == cll.head) {
-            // Removing the head element
-            cll.remove();
-            iterHead = cll.head;
-            expectedModCount = cll.modCount;
-            return;
-        }
 
         CircularLinkedList<T>.Node cur = cll.head;
         CircularLinkedList<T>.Node prev = null;
